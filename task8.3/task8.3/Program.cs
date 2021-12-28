@@ -10,38 +10,40 @@ namespace task8._3
     {
         static void Main(string[] args)
         {
-            
+            int sumPositive = 0, sumN = 0, numberP = 1, numberN = -1;
+
+
             Console.WriteLine("Введите целое число");
-            var a = int.Parse(Console.ReadLine());
+            var number = int.Parse(Console.ReadLine());
 
-            int sum = a;
-            int multiply = a;
-
-            if (a > 0)
+            if (number > 0)
             {
-                while (a != 0)
+                while (numberP != 0)
                 {
                     Console.WriteLine("Введите целое число");
-                    a = int.Parse(Console.ReadLine());
-                    sum += a;
+                    numberP = int.Parse(Console.ReadLine());
+                    if (numberP > 0)
+                        sumPositive += numberP;
                 }
-                Console.WriteLine(sum);
+                Console.WriteLine(sumPositive + number);
             }
-            else
+
+            else if (number < 0)
             {
-                while (a != 0)
+                while (numberN != 0)
                 {
                     Console.WriteLine("Введите целое число");
-                    a = int.Parse(Console.ReadLine());
-                    multiply *= a;
-
+                    numberN = int.Parse(Console.ReadLine());
+                    if (numberN < 0)
+                        sumN += numberN;
                 }
-                Console.WriteLine(multiply);
+                Console.WriteLine(sumN + number);
             }
+
 
             Console.ReadKey();
 
-            
+
         }
     }
 }
